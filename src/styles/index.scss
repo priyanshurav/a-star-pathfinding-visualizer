@@ -1,0 +1,81 @@
+* {
+  box-sizing: border-box;
+  font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
+}
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  width: 100vw;
+}
+html {
+  font-size: 16px;
+  margin: 0;
+  padding: 0;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(var(--cols), 20px);
+  grid-template-rows: repeat(var(--rows), 20px);
+  width: calc(var(--cols) * 20px);
+  height: calc(var(--rows) * 20px);
+  * {
+    border: 2px solid #000;
+  }
+  .open {
+    background-color: green;
+  }
+  .close {
+    background-color: red;
+  }
+  .start {
+    background-color: rgb(140, 94, 26);
+  }
+  .destination {
+    background-color: dodgerblue;
+  }
+  .wall {
+    background-color: #000;
+  }
+  .path {
+    background-color: darkblue;
+  }
+}
+.status-and-controls {
+  height: calc(100vh - calc(var(--rows) * 20px));
+  display: flex;
+  align-items: center;
+}
+.btn {
+  $transition-speed: 250ms;
+  text-transform: uppercase;
+  background-color: #000;
+  color: #ffffff;
+  border-radius: 5px;
+  padding: 10px 15px;
+  font-size: 1rem;
+  margin: 0 3px;
+  border: 2px solid #000;
+  transition: background-color $transition-speed, color $transition-speed;
+  cursor: pointer;
+  &:hover {
+    background-color: #eee;
+    color: #000;
+  }
+}
+
+.no-valid-path-found-text {
+  display: inline;
+  font-size: 1.8rem;
+  margin-left: 20px;
+  @media (max-width: 770px) {
+    & {
+      font-size: 3vw;
+    }
+  }
+}
+
+.hide {
+  display: none;
+}

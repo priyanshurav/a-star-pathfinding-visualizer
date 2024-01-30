@@ -1,0 +1,38 @@
+{
+  "name": "a-star-pathfinding-visualizer",
+  "version": "1.0.0",
+  "description": "An A* Pathfinding algorithm visualizer",
+  "scripts": {
+    "start": "cross-env NODE_ENV=development webpack-dev-server --color",
+    "lint": "eslint ./game/*.ts",
+    "format": "prettier --write .",
+    "lint:fix": "npm run lint -- --fix",
+    "build": "cross-env NODE_ENV=production webpack"
+  },
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/lodash": "^4.14.161",
+    "@typescript-eslint/eslint-plugin": "^4.2.0",
+    "@typescript-eslint/parser": "^4.2.0",
+    "awesome-typescript-loader": "^5.2.1",
+    "copy-webpack-plugin": "^6.2.1",
+    "cross-env": "^7.0.3",
+    "css-loader": "^4.3.0",
+    "eslint": "^7.10.0",
+    "eslint-webpack-plugin": "^2.4.1",
+    "file-loader": "^6.1.0",
+    "html-webpack-plugin": "^4.5.0",
+    "mini-css-extract-plugin": "^0.11.2",
+    "optimize-css-assets-webpack-plugin": "^5.0.4",
+    "prettier": "^2.1.2",
+    "sass": "^1.30.0",
+    "sass-loader": "^10.1.0",
+    "style-loader": "^1.2.1",
+    "terser-webpack-plugin": "^4.2.3",
+    "typescript": "^4.0.3",
+    "webpack": "^4.44.2",
+    "webpack-cli": "^3.3.12",
+    "webpack-dev-server": "^3.11.0"
+  }
+}
